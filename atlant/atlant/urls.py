@@ -25,5 +25,5 @@ router = routers.DefaultRouter()
 router.register('images', v.SetData, 'images')
 
 urlpatterns = [
-    url(r'^photo/', include(router.urls)),
+    url(r'^', include(router.urls)),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
