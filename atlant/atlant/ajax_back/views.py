@@ -17,4 +17,4 @@ class SetData(viewsets.ModelViewSet):
 
     @method_decorator(csrf_exempt)
     def dispatch(self, *args, **kwargs):
-        return super(Info, self).dispatch(*args, **kwargs)
+        return super(SetData, self).dispatch(*args, **kwargs)
