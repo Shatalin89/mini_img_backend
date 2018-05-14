@@ -22,10 +22,12 @@ import atlant.ajax_back.views as v
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
 
 router = routers.DefaultRouter()
 router.register('images', v.SetData, 'images')
 
 urlpatterns = [
+    url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
