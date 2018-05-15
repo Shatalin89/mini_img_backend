@@ -9,4 +9,5 @@ class Info(m.Model):
     description = m.CharField(max_length=30000, null=True, blank=True)
     image = m.ImageField(blank=True, verbose_name=u'Картинка', upload_to='media')
     datetime_add = m.DateTimeField(default=now, null=True)
+    winner = m.BooleanField(default=False)
 
