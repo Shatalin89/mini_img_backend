@@ -2,3 +2,4 @@ django
 Pillow
 django-rest-framework
 django-cors-headers
+six
