@@ -1,10 +1,6 @@
 
 from django.db import models as m
 from django.utils.timezone import now
-# Create your models here.
-
-
-
 
 
 class Info(m.Model):
@@ -15,4 +11,7 @@ class Info(m.Model):
     image_base64 = m.ImageField(blank=True, verbose_name=u'Картинка', upload_to='media')
     datetime_add = m.DateTimeField(default=now, null=True)
     winner = m.BooleanField(default=False)
+    
+    def __str__(self):
+        return self.name
 
